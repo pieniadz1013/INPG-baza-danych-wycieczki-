@@ -1,14 +1,14 @@
-/*funkcja znajduje najmniejsz¹ wartoœæ na liœcie*/
+/*funkcja znajduje najmniejszÄ… wartoÅ›Ä‡ na liÅ›cie*/
 
-struct drzewo *MIN(struct drzewo *root)
+struct drzewo *MIN(struct drzewo *korzen)
 {
-  if(root == NULL)
+  if(korzen == NULL)
 	printf("Drzewo jest puste");
   else
   {
-	if(root->left == NULL)
-        return root;
+	if(korzen->lewy == NULL)
+        return korzen;
 	else
-        MIN(root->left);
+        MIN(korzen->lewy);
   }
 }
