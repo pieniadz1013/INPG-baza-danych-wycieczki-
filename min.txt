@@ -1,0 +1,14 @@
+/*funkcja znajduje najmniejsz¹ wartoœæ na liœcie*/
+
+struct drzewo *MIN(struct drzewo *root)
+{
+  if(root == NULL)
+	printf("Drzewo jest puste");
+  else
+  {
+	if(root->left == NULL)
+        return root;
+	else
+        MIN(root->left);
+  }
+}
