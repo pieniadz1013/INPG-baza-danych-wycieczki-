@@ -1,0 +1,11 @@
+struct drzewo* max(struct drzewo* root)
+{
+	if(root->right==NULL)
+	{
+		return root;
+	}
+	else
+	{
+		WyszukajMax(wezel->right);
+	}
+}
