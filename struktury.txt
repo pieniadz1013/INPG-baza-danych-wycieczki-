@@ -1,0 +1,32 @@
+/*deklaracja struktur*/
+
+typedef struct typ
+{
+
+}
+Typ;
+
+typedef struct pozycja
+{
+    float cena;
+    char kraj[DLUGOSC];
+    char miasto[DLUGOSC];
+    char data[DLUGOSC];
+    Typ typ;
+}
+Wycieczka;
+
+typedef struct wezel
+{
+    struct wezel * prawy;
+    struct wezel * lewy;
+    Wycieczka wycieczka;
+}
+Wezel;
+
+typedef struct drzewo
+{
+    Wezel * korzen;
+    int rozmiar;
+}
+Drzewo;
