@@ -1,0 +1,9 @@
+/*funkcja przechodzi po drzewie*/
+void inorder(struct drzewo* korzen)
+{
+    if(korzen->lewy != NULL)
+        inorder(root->lewy);
+    printf("%s  %s  %s  %d\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
+    if(root->prawy != NULL)
+        inorder(root->prawy);
+}
