@@ -1,0 +1,24 @@
+Wezel* Search(Wezel* wezel, int* cena)
+{
+	
+	int i;
+
+	if(wezel==NULL)
+		{
+			return NULL;
+		}
+
+	if(wezel>cena)
+	{
+		return Search(wezel->lewy, cena);
+	}
+
+	else if(wezel<cena)
+	{
+		return Search(wezel->prawy, cena);
+	}
+	else
+	{
+		return wezel;
+	}
+}
