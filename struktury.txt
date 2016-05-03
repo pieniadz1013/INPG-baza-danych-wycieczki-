@@ -18,6 +18,7 @@ Wycieczka;
 
 typedef struct wezel
 {
+    struct wezel * rodzic;
     struct wezel * prawy;
     struct wezel * lewy;
     Wycieczka wycieczka;
