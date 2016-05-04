@@ -1,0 +1,28 @@
+/*funkcja usuwa wêze³*/
+
+struct drzewo *usun(struct drzewo *korzen, struct drzewo *usuwane)
+{
+	stuct drzewo *x;
+	struct drzewo *y;
+	if(usuwane->prawy == NULL || usuwane->lewy == NULL)
+		y = usuwane;
+	else
+		y = kolejny(usuwane); //funkcja do napisania
+
+	if(y->lewy != NULL)
+		x = y->lewy;
+	else
+		x = y->prawy;
+
+	//tu zaczynaja sie problemy
+	if(x != NULL)
+		x->parent = y->parent;
+	if(y->parent == NULL)
+		korzen = x;
+	else
+	{
+		if(y == y->parent->lewy)
+			y->parent->lewy = x;
+		else
+			y->parent->prawy = x;
+	//co dalej?
