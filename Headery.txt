@@ -1,0 +1,8 @@
+// headery- wersja tymczasowa
+
+void menu(void);
+struct drzewo *MIN(struct drzewo *korzen);
+int Insert (Drzewo** korzen, Pozycja* nowa_pozycja);
+struct drzewo* max(struct drzewo* korzen);
+Wezel* Search(Wezel* wezel, int* cena);
+void inorder(struct drzewo* korzen);
