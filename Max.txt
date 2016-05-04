@@ -1,4 +1,4 @@
-// funkcja znajduje wartość największą (wdg ceny)
+// funkcja znajduje wartość największą (według ceny)
 
 struct drzewo* max(struct drzewo* korzen)
 {
