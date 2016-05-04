@@ -1,0 +1,18 @@
+int Wysokosc_drzewa(Drzewo* korzen)
+{
+    if(korzen == NULL)
+        return 0;
+    int lewe, prawe;
+    if(korzen->lewy == NULL)
+        lewe = 0;
+    else
+        lewe = Wysokosc_drzewa(korzen->lewy)+1;
+    if(korzen->prawy == NULL)
+        prawe = 0;
+    else
+        prawe = Wysokosc_drzewa(korzen->prawy)+1;
+    if(lewe >= prawe)
+        return lewe;
+    else
+        return prawe;
+}
