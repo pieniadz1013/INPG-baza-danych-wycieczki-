@@ -1,3 +1,5 @@
+// funkcja znajduje wartość największą (wdg ceny)
+
 struct drzewo* max(struct drzewo* korzen)
 {
 	if(korzen->prawy==NULL)
