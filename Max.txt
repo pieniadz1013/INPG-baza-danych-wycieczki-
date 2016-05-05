@@ -2,12 +2,14 @@
 
 struct drzewo* max(struct drzewo* korzen)
 {
+	if(korzen == NULL)
+		printf("Drzewo jest puste");
 	if(korzen->prawy==NULL)
 	{
 		return korzen;
 	}
 	else
 	{
-		WyszukajMax(Wezel->prawy);
+		max(Wezel->prawy);
 	}
 }
