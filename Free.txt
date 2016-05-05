@@ -1,0 +1,15 @@
+void Free(Drzewo** korzen)
+{
+    if(korzen == NULL)
+        return;
+    if(*korzen == NULL)
+        return;
+    if((*korzen)->lewy != NULL)
+        Free(&((*korzen)->lewy));
+    if((*korzen)->prawy != NULL)
+        Free(&((*korzen)->prawy));
+    free((*korzen)->pozycja->numery);
+    free((*korzen)->pozycja);
+    free(*korzen);
+    *korzen = NULL;
+}
