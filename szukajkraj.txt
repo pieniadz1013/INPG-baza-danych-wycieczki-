@@ -6,5 +6,5 @@ void szukajkraj(struct drzewo* korzen, char* szukane)
     if(strcmp(szukane, korzen->wycieczka.kraj) == 0) 
     	printf("%s  %s  %s  %d\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
     if(korzen->prawy != NULL)
-        inorder(korzen->prawy);
+        szukajkraj(korzen->prawy);
 }
