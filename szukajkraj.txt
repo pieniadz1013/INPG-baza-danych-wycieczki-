@@ -1,0 +1,10 @@
+/*funkcja szuka wycieczek do danego kraju - nie wiem czy dziala...*/
+void szukajkraj(struct drzewo* korzen, char* szukane)
+{
+    if(korzen->lewy != NULL)
+        szukajkraj(korzen->lewy);
+    if(strcmp(szukane, korzen->wycieczka.kraj) == 0) 
+    	printf("%s  %s  %s  %d\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
+    if(korzen->prawy != NULL)
+        inorder(korzen->prawy);
+}
