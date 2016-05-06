@@ -1,6 +1,6 @@
-/*funkcja usuwa wêze³*/
+/*funkcja usuwa wÃªzeÂ³*/
 
-struct drzewo *usun(struct drzewo *korzen, struct drzewo *usuwane)
+Wezel *usun(Wezel* korzen, Wezel* usuwane)
 {
 	stuct drzewo *x;
 	struct drzewo *y;
