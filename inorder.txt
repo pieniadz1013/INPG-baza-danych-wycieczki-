@@ -1,5 +1,5 @@
 /*funkcja przechodzi po drzewie*/
-void inorder(struct drzewo* korzen)
+void inorder(struct Wezel* korzen)
 {
     if(korzen->lewy != NULL)
         inorder(korzen->lewy);
