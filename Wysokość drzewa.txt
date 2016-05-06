@@ -1,4 +1,4 @@
-int Wysokosc_drzewa(Drzewo* korzen)
+int Wysokosc_drzewa(Wezel* korzen)
 {
     if(korzen == NULL)
         return 0;
