@@ -1,4 +1,4 @@
-int Liczba_wezlow(Drzewo* korzen)
+int Liczba_wezlow(Wezel* korzen)
 {
     if(korzen == NULL)
         return 0;
