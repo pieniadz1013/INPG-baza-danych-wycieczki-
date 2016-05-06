@@ -1,6 +1,6 @@
 // funkcja znajduje wartość największą (według ceny)
 
-Wezel* max(struct Wezel* korzen)
+Wezel* max(Wezel* korzen)
 {
 	if(korzen == NULL)
 		printf("Drzewo jest puste");
