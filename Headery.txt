@@ -1,8 +1,13 @@
-// headery- wersja tymczasowa
+// headery- uaktualniona wersja
 
-void menu(void);
-struct wezel *MIN(struct wezel *korzen);
-int Insert (Drzewo** korzen, Pozycja* nowa_pozycja);
-struct wezel* max(struct wezel* korzen);
+void menu(Wezel* korzen);
+Wezel *MIN(Wezel *korzen);
+int Insert (Wezel** korzen, Wycieczka* nowa_pozycja);
+Wezel* max(Wezel* korzen);
 Wezel* Search(Wezel* wezel, int* cena);
-void inorder(struct wezel* korzen);
+void inorder(Wezel* korzen);
+void Free(Wezel** korzen);
+int Liczba_wezlow(Wezel* korzen);
+int Wysokosc_drzewa(Wezel* korzen);
+void szukajkraj(Wezel* korzen, char* szukane);
+Wezel *usun(Wezel* korzen, Wezel* usuwane);
