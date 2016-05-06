@@ -2,7 +2,12 @@
 
 typedef struct typ
 {
-
+    char zakwaterowanie [DLUGOSC]; //hotel, motel, pole namiotowe, schronisko, pensjonat
+    char nazwa_osrodka [DLUGOSC];
+    char czy_all_inclusive [DLUGOSC]; //all inclusive lub nie
+    char rodzaj [DLUGOSC]; //krajoznawcza, turystyczna, wypoczynkowa
+    char dlugosc [DLUGOSC];
+    char srodek_transportu [DLUGOSC]; //samolot, bus, autokar, statek, samochod
 }
 Typ;
 
