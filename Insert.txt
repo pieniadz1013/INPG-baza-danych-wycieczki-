@@ -1,6 +1,6 @@
-/*funkcja dodaj¹ca pozycjê*/
+/*funkcja dodajÅ¡ca pozycjÄ™*/
 
-int Insert (Drzewo** korzen, Pozycja* nowa_pozycja)
+int Insert (Wezel** korzen, Pozycja* nowa_pozycja)
 {
     if(korzen == NULL || nowa_pozycja == NULL)
     {
