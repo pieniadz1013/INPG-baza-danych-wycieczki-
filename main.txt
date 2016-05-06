@@ -1,0 +1,49 @@
+int main()
+{
+	
+	printf("Witaj w naszej bazie danych. Przechowujemy tu informacje o naszych ofertach wycieczek.\n\n");
+	
+	if(tutaj jakis warunek, ktory sprawdza czy baza jest pusta)// pomocy!
+	{
+		Wezel* korzen;
+
+		korzen=(Wezel)malloc(sizeof(Wezel);
+
+		if(korzzen==NULL)
+		{
+			printf("Nie powiodlo sie przypisanie obszaru pamieci.");
+			return -1;
+		}
+
+		korzen->rodzic=NULL;
+		korzen->lewy= NULL;
+		korzen->prawy= NULL;
+		printf("Obecnie baza danych jest pusta. Prosze, wprowadz nastepujace dane:\n\n");
+		printf("cena: \n>");
+		scanf("%f", &(korzen->wycieczka.cena));
+		printf("\nkraj: \n>");
+		fgets(korzen->wycieczka.kraj, DLUGOSC, stdin);
+		printf("\nmiasto: \n>");
+		fgets(korzen->wycieczka.miasto, DLUGOSC, stdin);
+		printf("\ndata: \n>");
+		fgets(korzen->wycieczka.data, DLUGOSC, stdin);
+		printf("\nzakwaterowanie: \n>");
+		fgets(korzen->wycieczka.typ.zakwaterowanie, DLUGOSC, stdin);
+		printf("\nnazwa osrodka: \n>");
+		fgets(korzen->wycieczka.typ.nazwa_osrodka, DLUGOSC, stdin);
+		printf("\nall inclusive (TAK lub NIE): \n>");
+		fgets(korzen->wycieczka.typ.czy_all_inclusive, DLUGOSC, stdin);
+		printf("\nrodzaj: \n>");
+		fgets(korzen->wycieczka.typ.rodzaj, DLUGOSC, stdin);
+		printf("\ndlugosc pobytu: \n>");
+		fgets(korzen->wycieczka.typ.dlugosc, DLUGOSC, stdin);
+		printf("\nsrodek transportu: \n>");
+		fgets(korzen->wycieczka.typ.srodek_transportu, DLUGOSC, stdin);
+
+		printf("\n\nGotowe!");
+	}
+	
+	 menu(korzen); 		// rowniez potrzebuje pomocy!
+
+	return 0;
+}
