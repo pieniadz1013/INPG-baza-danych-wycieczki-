@@ -25,9 +25,3 @@ typedef struct wezel
 }
 Wezel;
 
-typedef struct drzewo
-{
-    Wezel * korzen;
-    int rozmiar;
-}
-Drzewo;
