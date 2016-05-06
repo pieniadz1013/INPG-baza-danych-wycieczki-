@@ -1,5 +1,5 @@
 /*funkcja szuka wycieczek do danego kraju - nie wiem czy dziala...*/
-void szukajkraj(struct drzewo* korzen, char* szukane)
+void szukajkraj(struct Wezel* korzen, char* szukane)
 {
     if(korzen->lewy != NULL)
         szukajkraj(korzen->lewy);
