@@ -1,6 +1,6 @@
 /*funkcja znajduje najmniejszą wartość na liście*/
 
-struct drzewo *MIN(struct Wezel *korzen)
+Wezel* MIN(Wezel *korzen)
 {
   if(korzen == NULL)
 	printf("Drzewo jest puste");
