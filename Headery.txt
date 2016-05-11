@@ -1,4 +1,8 @@
 // headery- uaktualniona wersja
+#ifndef "DRZEWO.H"
+#define "DRZEWO.H"
+#include <stdio.h>
+#include <string.h>
 
 typedef struct typ
 {
@@ -41,3 +45,4 @@ int Liczba_wezlow(Wezel* korzen);
 int Wysokosc_drzewa(Wezel* korzen);
 void szukajkraj(Wezel* korzen, char* szukane);
 Wezel *usun(Wezel* korzen, Wezel* usuwane);
+#endif
