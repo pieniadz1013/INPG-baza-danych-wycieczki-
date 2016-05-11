@@ -1,9 +1,0 @@
-/*funkcja przechodzi po drzewie*/
-void inorder(Wezel* korzen)
-{
-    if(korzen->lewy != NULL)
-        inorder(korzen->lewy);
-    printf("%s  %s  %s  %d\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
-    if(korzen->prawy != NULL)
-        inorder(korzen->prawy);
-}
