@@ -1,5 +1,35 @@
 // headery- uaktualniona wersja
 
+typedef struct typ
+{
+    char zakwaterowanie [DLUGOSC]; //hotel, motel, pole namiotowe, schronisko, pensjonat
+    char nazwa_osrodka [DLUGOSC];
+    char czy_all_inclusive [DLUGOSC]; //all inclusive lub nie
+    char rodzaj [DLUGOSC]; //krajoznawcza, turystyczna, wypoczynkowa
+    char dlugosc [DLUGOSC];
+    char srodek_transportu [DLUGOSC]; //samolot, bus, autokar, statek, samochod
+}
+Typ;
+
+typedef struct pozycja
+{
+    float cena;
+    char kraj[DLUGOSC];
+    char miasto[DLUGOSC];
+    char data[DLUGOSC];
+    Typ typ;
+}
+Wycieczka;
+
+typedef struct wezel
+{
+    struct wezel * rodzic;
+    struct wezel * prawy;
+    struct wezel * lewy;
+    Wycieczka wycieczka;
+}
+Wezel;
+
 void menu(Wezel* korzen);
 Wezel *MIN(Wezel *korzen);
 int Insert (Wezel** korzen, Wycieczka* nowa_pozycja);
