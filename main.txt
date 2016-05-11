@@ -9,7 +9,7 @@ int main()
 
 		korzen=(Wezel)malloc(sizeof(Wezel);
 
-		if(korzzen==NULL)
+		if(korzen==NULL)
 		{
 			printf("Nie powiodlo sie przypisanie obszaru pamieci.");
 			return -1;
