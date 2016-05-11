@@ -1,7 +1,0 @@
-int Liczba_wezlow(Wezel* korzen)
-{
-    if(korzen == NULL)
-        return 0;
-    else
-        return (Liczba_wezlow(korzen->lewy)+1+Liczba_wezlow(korzen->prawy));
-}
