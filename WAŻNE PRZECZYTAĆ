@@ -1,0 +1,5 @@
+Spróbowałam skompilować nasze drzewo i mam problem z dwoma funkcjami.
+Piotrek, we free używasz odniesienia korzen->pozycja, ale takiego czegoś nie ma, a ja nie wiem jaki był zamysł, więc nie umiem porpawić.
+Funkcja insert odwołuje sie do nazwisk, imion - to chyba pozostałośc starego drzewa binarnego? TRZEBA POPRAWIĆ
+
+pozdrawiam scrum master xoxo
