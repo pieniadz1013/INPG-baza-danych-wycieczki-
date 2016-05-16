@@ -1,4 +1,4 @@
-#include "DRZEWO.H"
+#include "DRZEWOV.H"
 
 void Free(Wezel** korzen)
 {
@@ -102,10 +102,10 @@ int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
                 rodzic = rodzic->prawy;
             }
         }
-        
+
     }
     return 0;
-}
+}*/
 
 int Liczba_wezlow(Wezel* korzen)
 {
@@ -125,13 +125,13 @@ Wezel* max(Wezel* korzen)
 	}
 	else
 	{
-		max(Wezel->prawy);
+		max(korzen->prawy);
 	}
 }
 
 Wezel* Search(Wezel* wezel, int* cena)
 {
-	
+
 	int i;
 
 	if(wezel==NULL)
@@ -200,9 +200,9 @@ Wezel* MIN(Wezel *korzen)
 void szukajkraj(Wezel* korzen, char* szukane)
 {
     if(korzen->lewy != NULL)
-        szukajkraj(korzen->lewy);
-    if(strcmp(szukane, korzen->wycieczka.kraj) == 0) 
+        szukajkraj(korzen->lewy, szukane);
+    if(strcmp(szukane, korzen->wycieczka.kraj) == 0)
     	printf("%s  %s  %s  %d\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
     if(korzen->prawy != NULL)
-        szukajkraj(korzen->prawy);
+        szukajkraj(korzen->prawy, szukane);
 }
