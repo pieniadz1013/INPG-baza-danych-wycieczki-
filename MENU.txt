@@ -8,12 +8,13 @@ void menu(Wezel* korzen)
 
 	int petla = TRUE;
 	char wybor;
+	long cena;
 
 	while(petla)
 	{
 		
 		puts("Wybierz co chcesz zrobic:");
-		puts("d - dodaj nowπ wycieczke do bazy danych");
+		puts("d - dodaj now≈° wycieczke do bazy danych");
 		puts("w - wyswietl wszystkie wycieczki");
 		puts("p- wyswietl najtansza wycieczke");
 		puts("o- wyswietl najdrozsza wycieczke");
@@ -52,6 +53,12 @@ void menu(Wezel* korzen)
 				break;
 			case 'l':
 				printf("Ilosc pozycji: %d\n",Liczba_wezlow(korzen));
+				break;
+			case 's':
+				printf("Podaj maksymalna kwote, jaka chcesz wydac:   /n");
+				scanf("%f", &cena);
+				printf("/n/n oto nasza oferta wycieczek do %f zl:/n/n", cena);
+				szukam(korzen, cena);
 				break;
 			case 'k':
 				char kraj[DLUGOSC];
