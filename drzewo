@@ -76,7 +76,7 @@ int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
 
     }
     return 0;
-}*/
+}
 
 int Liczba_wezlow(Wezel* korzen)
 {
