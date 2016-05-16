@@ -10,8 +10,8 @@ void Free(Wezel** korzen)
         Free(&((*korzen)->lewy));
     if((*korzen)->prawy != NULL)
         Free(&((*korzen)->prawy));
-    free((*korzen)->Wycieczka->typ);
-    free((*korzen)->Wycieczka);
+    free((*korzen)->wycieczka->typ);
+    free((*korzen)->wycieczka);
     free(*korzen);
     *korzen = NULL;
 }
@@ -26,7 +26,7 @@ int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
     nowy = (Wezel*) malloc(sizeof(Wezel));
     if(nowy != NULL)
     {
-        nowy->pozycja = nowa_pozycja;
+        nowy->wycieczka = nowa_pozycja;
         nowy->lewy = NULL;
         nowy->prawy = NULL;
     }
@@ -44,18 +44,17 @@ int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
     while(1)
     {
         int porownanie;
-        porownanie = strcmp (nowa_pozycja->nazwisko, rodzic->pozycja->nazwisko);
-        if(porownanie == 0) //to samo nazwisko
+        porownanie = strcmp (nowa_pozycja->nazwa, rodzic->wycieczka->nazwa);
+        if(porownanie == 0)
         {
-            porownanie = strcmp (nowa_pozycja->imie, rodzic->pozycja->imie);
+            porownanie = strcmp (nowa_pozycja->imie, rodzic->wycieczka->imie);
             if(porownanie == 0)
             {
-                printf("Istnieje juz osoba o tym imieniu i nazwisku");
                 return 0;
             }
             else if(porownanie > 0)
             {
-                if(lewy->pozycja == NULL)
+                if(lewy->wycieczka == NULL)
                 {
                     rodzic->lewy = nowy;
                     return 0;
@@ -67,7 +66,7 @@ int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
             }
             else
             {
-                if(prawy->pozycja == NULL)
+                if(prawy->wycieczka == NULL)
                 {
                     rodzic->prawy = nowy;
                     return 0;
