@@ -1,8 +1,10 @@
+
 // headery- uaktualniona wersja
-#ifndef "DRZEWO.H"
-#define "DRZEWO.H"
+#ifndef DRZEWOV.H
+#define DRZEWOV.H
 #include <stdio.h>
 #include <string.h>
+#define DLUGOSC 20
 
 typedef struct typ
 {
