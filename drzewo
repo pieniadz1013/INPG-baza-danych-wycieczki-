@@ -47,35 +47,7 @@ int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
         porownanie = strcmp (nowa_pozycja->nazwa, rodzic->wycieczka->nazwa);
         if(porownanie == 0)
         {
-            porownanie = strcmp (nowa_pozycja->imie, rodzic->wycieczka->imie);
-            if(porownanie == 0)
-            {
-                return 0;
-            }
-            else if(porownanie > 0)
-            {
-                if(lewy->wycieczka == NULL)
-                {
-                    rodzic->lewy = nowy;
-                    return 0;
-                }
-                else
-                {
-                    rodzic = rodzic->lewy;
-                }
-            }
-            else
-            {
-                if(prawy->wycieczka == NULL)
-                {
-                    rodzic->prawy = nowy;
-                    return 0;
-                }
-                else
-                {
-                    rodzic = rodzic->prawy;
-                }
-            }
+            return 0;
         }
         else if(porownanie > 0)
         {
