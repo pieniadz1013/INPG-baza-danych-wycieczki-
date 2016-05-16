@@ -8,8 +8,8 @@ void Free(Wezel** korzen)
         Free(&((*korzen)->lewy));
     if((*korzen)->prawy != NULL)
         Free(&((*korzen)->prawy));
-    free((*korzen)->pozycja->numery);
-    free((*korzen)->pozycja);
+    free((*korzen)->wycieczka->typ);
+    free((*korzen)->wycieczka);
     free(*korzen);
     *korzen = NULL;
 }
