@@ -3,7 +3,7 @@ void szukam(Wezel* wezel, float cena)
 
 	while(cena>=wezel->wycieczka.cena)
 	{	
-		if(wezel->lewy!=NULL && wezel )
+		if(wezel->lewy!=NULL)
 		{
 			szukam(wezel->lewy, cena);
 		}
