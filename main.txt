@@ -19,7 +19,9 @@ int main()
 		korzen->lewy= NULL;
 		korzen->prawy= NULL;
 		printf("Obecnie baza danych jest pusta. Prosze, wprowadz nastepujace dane:\n\n");
-		printf("cena: \n>");
+		printf("nazwa: \n>");
+		fgets(korzen->wycieczka.nazwa, DLUGOSC, stdin);
+		printf("\ncena: \n>");
 		scanf("%f", &(korzen->wycieczka.cena));
 		printf("\nkraj: \n>");
 		fgets(korzen->wycieczka.kraj, DLUGOSC, stdin);
