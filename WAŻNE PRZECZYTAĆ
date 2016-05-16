@@ -3,3 +3,4 @@ Piotrek, we free używasz odniesienia korzen->pozycja, ale takiego czegoś nie m
 Funkcja insert odwołuje sie do nazwisk, imion - to chyba pozostałośc starego drzewa binarnego? TRZEBA POPRAWIĆ
 
 pozdrawiam scrum master xoxo
+już poprawiłem, dodałem jeszcze nazwę wycieczki, żeby było łatwiej dodawać nowe pozycje, i w mainie też to uwzgledniłem, teraz powinno działać
