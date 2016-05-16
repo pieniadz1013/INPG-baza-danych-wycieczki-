@@ -1,0 +1,18 @@
+void szukam(Wezel* wezel, float cena)
+{
+
+	while(cena>=wezel->wycieczka.cena)
+	{	
+		if(wezel->lewy!=NULL && wezel )
+		{
+			szukam(wezel->lewy, cena);
+		}
+
+		printf("%s  %s  %s  %d\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
+
+		if(wezel->prawy!=NULL)
+		{
+			szukam(wezel->prawy, cena);
+		}
+	}
+}
