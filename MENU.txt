@@ -9,7 +9,8 @@ void menu(Wezel* korzen)
 	int petla = TRUE;
 	char wybor;
 	long cena;
-
+	Wycieczka* pozycja;
+	char kraj[DLUGOSC];
 	while(petla)
 	{
 		
@@ -31,15 +32,14 @@ void menu(Wezel* korzen)
 		switch(wybor)
 		{
 			case 'd':
-				Wycieczka* pozycja; 
 				printf("Podaj cene:  ");
-				scanf("%f", pozycja.cena);
+				scanf("%f", pozycja->cena);
 				printf("Podaj kraj:  ");
-				fgets(pozycja.kraj, DLUGOSC, stdin);
+				fgets(pozycja->kraj, DLUGOSC, stdin);
 				printf("Podaj miasto:  ");
-				fgets(pozycja.miasto, DLUGOSC, stdin);
+				fgets(pozycja->miasto, DLUGOSC, stdin);
 				printf("Podaj date:  ");
-				fgets(pozycja.data, DLUGOSC, stdin);
+				fgets(pozycja->data, DLUGOSC, stdin);
 				Insert(&korzen, pozycja);
 				break;
 			case 'w':
@@ -61,7 +61,6 @@ void menu(Wezel* korzen)
 				szukam(korzen, cena);
 				break;
 			case 'k':
-				char kraj[DLUGOSC];
 				printf("Wpisz kraj:\n");
 				scanf("%s", kraj);
 				szukajkraj(korzen, kraj);
