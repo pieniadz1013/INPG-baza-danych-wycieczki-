@@ -146,7 +146,7 @@ void inorder(Wezel* korzen)
 {
     if(korzen->lewy != NULL)
         inorder(korzen->lewy);
-    printf("%s  %s  %s  %d\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
+    printf("%s  %s  %s  %d\n", korzen->wycieczka->kraj, korzen->wycieczka->miasto, korzen->wycieczka->data, korzen->wycieczka->cena);
     if(korzen->prawy != NULL)
         inorder(korzen->prawy);
 }
@@ -171,7 +171,7 @@ void szukajkraj(Wezel* korzen, char* szukane)
     if(korzen->lewy != NULL)
         szukajkraj(korzen->lewy, szukane);
     if(strcmp(szukane, korzen->wycieczka.kraj) == 0)
-    	printf("%s  %s  %s  %d\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
+    	printf("%s  %s  %s  %d\n", korzen->wycieczka->kraj, korzen->wycieczka->miasto, korzen->wycieczka->data, korzen->wycieczka->cena);
     if(korzen->prawy != NULL)
         szukajkraj(korzen->prawy, szukane);
 }
