@@ -1,7 +1,7 @@
 
 // headery- uaktualniona wersja
-#ifndef DRZEWOV.H
-#define DRZEWOV.H
+#ifndef DRZEWO.H
+#define DRZEWO.H
 #include <stdio.h>
 #include <string.h>
 #define DLUGOSC 20
