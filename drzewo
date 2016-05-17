@@ -14,7 +14,7 @@ void Free(Wezel** korzen)
     *korzen = NULL;
 }
 
-int Insert (Wezel** korzen, Wycieczka nowa_pozycja)
+int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
 {
     if(korzen == NULL)
     {
