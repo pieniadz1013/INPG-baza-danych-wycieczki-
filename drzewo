@@ -1,4 +1,4 @@
-#include "DRZEWOV.H"
+#include "DRZEWO.H"
 
 void Free(Wezel** korzen)
 {
@@ -10,15 +10,13 @@ void Free(Wezel** korzen)
         Free(&((*korzen)->lewy));
     if((*korzen)->prawy != NULL)
         Free(&((*korzen)->prawy));
-    free((*korzen)->wycieczka->typ);
-    free((*korzen)->wycieczka);
     free(*korzen);
     *korzen = NULL;
 }
 
-int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
+int Insert (Wezel** korzen, Wycieczka nowa_pozycja)
 {
-    if(korzen == NULL || nowa_pozycja == NULL)
+    if(korzen == NULL)
     {
         return -1;
     }
@@ -40,37 +38,37 @@ int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
         *korzen = nowy;
         return 0;
     }
-    Wezel* rodzic = *korzen;
+    Wezel* wsk = *korzen;
     while(1)
     {
         int porownanie;
-        porownanie = strcmp (nowa_pozycja->nazwa, rodzic->wycieczka->nazwa);
+        porownanie = strcmp (nowa_pozycja.nazwa, wsk->wycieczka.nazwa);
         if(porownanie == 0)
         {
             return 0;
         }
         else if(porownanie > 0)
         {
-            if(lewy->pozycja == NULL)
+            if(wsk->lewy == NULL)
             {
-                rodzic->lewy = nowy;
+                wsk->lewy = nowy;
                 return 0;
             }
             else
             {
-                rodzic = rodzic->lewy;
+                wsk = wsk->lewy;
             }
         }
         else
         {
-            if(prawy->pozycja == NULL)
+            if(wsk->prawy == NULL)
             {
-                rodzic->prawy = nowy;
+                wsk->prawy = nowy;
                 return 0;
             }
             else
             {
-                rodzic = rodzic->prawy;
+                wsk = wsk->prawy;
             }
         }
 
