@@ -42,7 +42,7 @@ int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
     while(1)
     {
         int porownanie;
-        porownanie = strcmp (nowa_pozycja.nazwa, wsk->wycieczka.nazwa);
+        porownanie = strcmp (nowa_pozycja->nazwa, wsk->wycieczka->nazwa);
         if(porownanie == 0)
         {
             return 0;
