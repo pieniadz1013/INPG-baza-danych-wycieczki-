@@ -1,10 +1,2 @@
 //Tu wpisujemy wycieczki
 
-FILE* fp;
-
-fp=fopen("plik.txt", w);
-if(fp==NULL)
-{
-  printf("nie udalo sie otworzyc pliku!");
-}
-...
