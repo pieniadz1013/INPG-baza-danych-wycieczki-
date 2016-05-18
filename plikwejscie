@@ -1,2 +1,15 @@
 //Tu wpisujemy wycieczki
 
+
+   nazwa: 
+   cena:
+   kraj:
+   miasto:
+   data:
+   zakwaterowanie:
+   nazwa_osrodka:
+   czy_all_inclusive: 
+   rodzaj:
+   dlugosc: 
+   srodek_transportu:
+ 
