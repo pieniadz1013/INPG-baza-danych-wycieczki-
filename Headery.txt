@@ -48,4 +48,6 @@ int Liczba_wezlow(Wezel* korzen);
 int Wysokosc_drzewa(Wezel* korzen);
 void szukajkraj(Wezel* korzen, char* szukane);
 Wezel *usun(Wezel* korzen, Wezel* usuwane);
+void szukam(Wezel* wezel, float cena);
+
 #endif
