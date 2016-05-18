@@ -98,7 +98,7 @@ Wezel* max(Wezel* korzen)
 	}
 }
 
-Wezel* Search(Wezel* wezel, int* cena)
+Wezel* Search(Wezel* wezel, int* cena)	// wyszukuje DANĄ cenę
 {
 
 	int i;
@@ -120,6 +120,25 @@ Wezel* Search(Wezel* wezel, int* cena)
 	else
 	{
 		return wezel;
+	}
+}
+
+void szukam(Wezel* wezel, float cena)		// wyszukuje ceny mniejsze lub równe od danej ceny
+{						// Pewnie nie dziala
+
+	while(cena>=wezel->wycieczka.cena)
+	{	
+		if(wezel->lewy!=NULL)
+		{
+			szukam(wezel->lewy, cena);
+		}
+
+		printf("%s  %s  %s  %d\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
+
+		if(wezel->prawy!=NULL)
+		{
+			szukam(wezel->prawy, cena);
+		}
 	}
 }
 
