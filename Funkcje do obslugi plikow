@@ -1,7 +1,7 @@
 To tutaj beda te wszystkie fopen, fprintf i tak dalej
 
 
-FILE* plik = fopen("danewe.txt", "r");
+FILE* plik = fopen("plikwejscie.txt", "r");
 if(plik != NULL)
 {
   instrukcje
