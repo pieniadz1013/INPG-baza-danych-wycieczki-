@@ -1,28 +1,27 @@
-
-// headery- uaktualniona wersja
 #ifndef DRZEWO.H
 #define DRZEWO.H
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #define DLUGOSC 20
 
 typedef struct typ
 {
     char zakwaterowanie [DLUGOSC]; //hotel, motel, pole namiotowe, schronisko, pensjonat
-    char nazwa_osrodka [DLUGOSC];   // jednowyrazowa!
-    char czy_all_inclusive [DLUGOSC]; // TAK lub NIE
+    char nazwa_osrodka [DLUGOSC];
+    char czy_all_inclusive [DLUGOSC]; //all inclusive lub nie
     char rodzaj [DLUGOSC]; //krajoznawcza, turystyczna, wypoczynkowa
-    char dlugosc [DLUGOSC]; // w dniach
+    char dlugosc [DLUGOSC];
     char srodek_transportu [DLUGOSC]; //samolot, bus, autokar, statek, samochod
 }
 Typ;
 
 typedef struct pozycja
 {
-    float cena; // w zl
+    float cena;
     char kraj[DLUGOSC];
     char miasto[DLUGOSC];
-    char data[DLUGOSC]; //format dd.mm.rr
+    char data[DLUGOSC];
     Typ typ;
 }
 Wycieczka;
@@ -32,17 +31,17 @@ typedef struct wezel
     struct wezel * rodzic;
     struct wezel * prawy;
     struct wezel * lewy;
-    Wycieczka * wycieczka;
+    Wycieczka wycieczka;
 }
 Wezel;
 
 void menu(Wezel* korzen);
 Wezel *MIN(Wezel *korzen);
-int Insert (Wezel** korzen, Wycieczka* nowa_pozycja);
+int Insert (Wezel** korzen, Wycieczka nowa_pozycja);
 Wezel* max(Wezel* korzen);
-Wezel* Search(Wezel* wezel, int* cena);
+Wezel* Search(Wezel* wezel, float cena);
 void inorder(Wezel* korzen);
-void Free(Wezel** korzen);
+void Freee(Wezel** korzen);
 int Liczba_wezlow(Wezel* korzen);
 int Wysokosc_drzewa(Wezel* korzen);
 void szukajkraj(Wezel* korzen, char* szukane);
