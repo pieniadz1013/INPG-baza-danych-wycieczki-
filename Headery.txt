@@ -20,7 +20,6 @@ Typ;
 typedef struct pozycja
 {
     float cena;
-    char nazwa[DLUGOSC];
     char kraj[DLUGOSC];
     char miasto[DLUGOSC];
     char data[DLUGOSC];
