@@ -1,10 +1,13 @@
 To tutaj beda te wszystkie fopen, fprintf i tak dalej
 
-FILE* fp;
 
-fp=fopen("plik.txt", w);
-if(fp==NULL)
+FILE* plik = fopen("danewe.txt", "r");
+if(plik != NULL)
 {
-  printf("nie udalo sie otworzyc pliku!");
+  instrukcje
 }
-...
+else
+{
+  printf("nie udalo sie otworzyc pliku");
+}
+fclose (plik);
