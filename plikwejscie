@@ -1,4 +1,4 @@
 //Tu wpisujemy wycieczki
-cena  kraj  miasto   data        nazwa hotelu     czy AI    rodzaj         liczba dni   transport
-2200  Malta Valetta  14.07.16r   hotel Castille   Nie       krajoznawcza   14           samolot
-  
+cena  kraj     miasto   data rozpoczęcia      zakwaterowanie     czy AI    rodzaj         liczba dni   transport
+2200  Malta    Valetta  14.07.2016            hotel Castille     Nie       krajoznawcza   14           samolot
+879   Włochy   Rzym     26.06.2016            hotel***           Nie       krajoznawcza   4            autokar
