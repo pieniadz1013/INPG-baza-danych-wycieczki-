@@ -1,20 +1,20 @@
-#include "DRZEWO.H"
+#include "drzewo.h"
 
-void Free(Wezel** korzen)
+void Freee(Wezel** korzen)
 {
     if(korzen == NULL)
         return;
     if(*korzen == NULL)
         return;
     if((*korzen)->lewy != NULL)
-        Free(&((*korzen)->lewy));
+        Freee(&((*korzen)->lewy));
     if((*korzen)->prawy != NULL)
-        Free(&((*korzen)->prawy));
+        Freee(&((*korzen)->prawy));
     free(*korzen);
     *korzen = NULL;
 }
 
-int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
+int Insert (Wezel** korzen, Wycieczka nowa_pozycja)
 {
     if(korzen == NULL)
     {
@@ -41,13 +41,11 @@ int Insert (Wezel** korzen, Wycieczka* nowa_pozycja)
     Wezel* wsk = *korzen;
     while(1)
     {
-        int porownanie;
-        porownanie = strcmp (nowa_pozycja->nazwa, wsk->wycieczka->nazwa);
-        if(porownanie == 0)
+        if(nowa_pozycja.cena == wsk->wycieczka.cena)
         {
             return 0;
         }
-        else if(porownanie > 0)
+        else if(wsk->wycieczka.cena > nowa_pozycja.cena)
         {
             if(wsk->lewy == NULL)
             {
@@ -98,22 +96,19 @@ Wezel* max(Wezel* korzen)
 	}
 }
 
-Wezel* Search(Wezel* wezel, int* cena)	// wyszukuje DANĄ cenę
+Wezel* Search(Wezel* wezel, float cena)	// wyszukuje DANĄ cenę
 {
-
-	int i;
-
 	if(wezel==NULL)
 		{
 			return NULL;
 		}
 
-	if(wezel>cena)
+	if(wezel->wycieczka.cena > cena)
 	{
 		return Search(wezel->lewy, cena);
 	}
 
-	else if(wezel<cena)
+	else if(wezel->wycieczka.cena < cena)
 	{
 		return Search(wezel->prawy, cena);
 	}
@@ -127,13 +122,13 @@ void szukam(Wezel* wezel, float cena)		// wyszukuje ceny mniejsze lub równe od 
 {						// Pewnie nie dziala
 
 	while(cena>=wezel->wycieczka.cena)
-	{	
+	{
 		if(wezel->lewy!=NULL)
 		{
 			szukam(wezel->lewy, cena);
 		}
 
-		printf("%s  %s  %s  %d\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
+		printf("%s  %s  %s  %f\n", wezel->wycieczka.kraj, wezel->wycieczka.miasto, wezel->wycieczka.data, wezel->wycieczka.cena);
 
 		if(wezel->prawy!=NULL)
 		{
@@ -165,7 +160,7 @@ void inorder(Wezel* korzen)
 {
     if(korzen->lewy != NULL)
         inorder(korzen->lewy);
-    printf("%s  %s  %s  %d\n", korzen->wycieczka->kraj, korzen->wycieczka->miasto, korzen->wycieczka->data, korzen->wycieczka->cena);
+    printf("%s  %s  %s  %f\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
     if(korzen->prawy != NULL)
         inorder(korzen->prawy);
 }
@@ -190,7 +185,7 @@ void szukajkraj(Wezel* korzen, char* szukane)
     if(korzen->lewy != NULL)
         szukajkraj(korzen->lewy, szukane);
     if(strcmp(szukane, korzen->wycieczka.kraj) == 0)
-    	printf("%s  %s  %s  %d\n", korzen->wycieczka->kraj, korzen->wycieczka->miasto, korzen->wycieczka->data, korzen->wycieczka->cena);
+    	printf("%s  %s  %s  %f\n", korzen->wycieczka.kraj, korzen->wycieczka.miasto, korzen->wycieczka.data, korzen->wycieczka.cena);
     if(korzen->prawy != NULL)
         szukajkraj(korzen->prawy, szukane);
 }
