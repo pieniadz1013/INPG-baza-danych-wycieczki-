@@ -12,3 +12,4 @@ cena   kraj        miasto    data rozpoczęcia      zakwaterowanie     czy AI   
 2800   Portugalia  Porto     7.09.2016             hotel***           Tak       turystyczna    14           samolot
 450    Czechy      Praga     08.07.2016            hotel***           Nie       turystyczna    3            autokar
 949    Węgry       Budapeszt 20.08.2016            hotel**            Nie       turystyczna    4            autokar
+59999  Australia   Canberra  30.06.2016            hotel****          Tak       krajoznawcza   28           samolot
